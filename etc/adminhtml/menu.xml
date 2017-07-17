@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © 2017 JetITeam. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <update id="JetITeam_Base::modules"
+            title="JetITeam"
+            module="JetITeam_ShopByBrand"
+            sortOrder="30"
+            resource="JetITeamr_Base::modules" />
+        <add id="JetITeam_ShopByBrand::ShopByBrand"
+            title="Shop By Brand" 
+            module="JetITeam_ShopByBrand"
+            sortOrder="40"
+            resource="JetITeam_ShopByBrand::ShopByBrand"
+            parent="JetITeam_Base::modules" />
+        <add id="JetITeam_ProductLabels::brand"
+             title="Brand Manage"
+             translate="title"
+             module="JetITeam_ShopByBrand"
+             sortOrder="0"
+             action="brand/index/index"
+             resource="JetITeamr_ShopByBrand::brand"
+             parent="JetITeam_ShopByBrand::ShopByBrand"/>
+    </menu>
+</config>
